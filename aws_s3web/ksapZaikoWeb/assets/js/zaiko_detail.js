@@ -1,5 +1,4 @@
 url = "https://glb20se6vi.execute-api.ap-northeast-1.amazonaws.com/production/zaikoapi";
-//url = "https://n2vcdsv6gd.execute-api.ap-northeast-1.amazonaws.com/APIseatstage/seatmotionresource";
 var jsondata = "";
 
 $(document).ready(function(){

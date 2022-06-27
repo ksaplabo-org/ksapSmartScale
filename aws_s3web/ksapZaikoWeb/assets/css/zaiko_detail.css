@@ -2,13 +2,14 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 html {
-    height:100%;
+    height:100vh;
 }
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
     color: 333;
     height: 100%;
+    background-color: black;
 }
 
 #zaiko-skelton{
@@ -27,7 +28,7 @@ body {
 }
 
 .content-area{
-    display: table;
+    background-color: white;
 }
 
 .menu-area{
@@ -126,4 +127,20 @@ body {
 .zaiko-weight-box{
     display:inline;
     text-align: center;
+}
+
+#history-skelton{
+    display: none;
+}
+
+.history-area{
+    padding:10px;
+    background-color: black;
+}
+
+.history-row {
+    margin: 10px;
+    padding: 5px;
+    color: white;
+    background-color: light-gray;
 }
