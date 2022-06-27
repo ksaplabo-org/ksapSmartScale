@@ -54,7 +54,7 @@ body {
     margin:20px;
     display:inline-block;
     background-color:white;
-    width: 360px;
+    width: 305px;
     height: max-content;
     box-shadow:10px 10px 15px -5px;
 }
@@ -99,30 +99,31 @@ body {
 
 .zaiko-info{
     display:block;
-    width:100%;
-    padding:2px;
+    padding:1px;
 }
 
 .zaiko-su-area{
     display:inline;
+    width: auto;
 }
 
 .zaiko-su{
-    font-size:large;
+    font-size:x-large;
     display:inline;
-    padding-top:10px;
-    padding-bottom:10px;
 }
 
 .zaiko-weight-area{
-    display:inline;
-    font-size:x-small;
+    display:block;
+    font-size:small;
+    margin-bottom: 28px;
 }
 
 .zaiko-weight{
     display:inline;
+    text-align: center;
 }
 
 .zaiko-weight-box{
     display:inline;
+    text-align: center;
 }
