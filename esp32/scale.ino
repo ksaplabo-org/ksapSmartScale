@@ -11,10 +11,11 @@
 
 const int DT_PIN = 27;
 const int SCK_PIN = 33;
-const int QUEUE_LEN = 3;
+const int QUEUE_LEN = 5;
 const float THRESHOLD = 0.2;
 
 float queue[QUEUE_LEN];
+float sendWeight = 0;
 bool flgM = true;
 
 HX711 scale;
@@ -128,6 +129,7 @@ void loop() {
   if (evalQueue()){
     // 重量が安定
     display.drawLine(24, 44, 104 ,44);
+    sendWeight = weight;
     setBeacon(weight);  //データをビーコンにセット
     flgM = true;
   } else {
@@ -139,7 +141,7 @@ void loop() {
   
   // Beaconからアドバタイズパケット送信
   pAdvertising->start();
-  Serial.printf("Advertizing started (weight:%7.1f g)...\n",weight);
-  delay(250);
+  Serial.printf("Advertizing started (weight:%7.1f g)...\n",sendWeight);
+  delay(100);
 
 }

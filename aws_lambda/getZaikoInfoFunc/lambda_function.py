@@ -16,14 +16,14 @@ def lambda_handler(event, context):	                    #Lambdaから最初に�
         elif event['body-json']['data-type'] == 'zaiko-harai':
             now_dt = datetime.datetime.now() + datetime.timedelta(hours=9)
             st_dt = now_dt.strftime('%Y-%m-%dT%H:%M:%SZ')
-            ed_dt = (now_dt - datetime.timedelta(minutes=1)).strftime('%Y-%m-%dT%H:%M:%SZ')
+            ed_dt = (now_dt - datetime.timedelta(seconds=30)).strftime('%Y-%m-%dT%H:%M:%SZ')
             
             table = dynamodb.Table("ksap-zaiko-harai")
             scanData = table.scan(
                 FilterExpression = Attr('update_dt').between(ed_dt ,st_dt)
                 )
             if scanData['Count'] > 0:
-                scanData['Items'] = sorted(scanData['Items'], key=lambda x: x['datetime'])
+                scanData['Items'] = sorted(scanData['Items'], key=lambda x: x['datetime'] ,reverse=True)
 
         items=scanData['Items']
         print(items)
