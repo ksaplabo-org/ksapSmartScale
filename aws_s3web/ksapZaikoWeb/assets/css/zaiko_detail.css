@@ -55,7 +55,7 @@ body {
     margin:20px;
     display:inline-block;
     background-color:white;
-    width: 305px;
+    width: 320px;
     height: max-content;
     box-shadow:10px 10px 15px -5px;
 }
@@ -91,7 +91,7 @@ body {
 }
 
 .zaiko-info-area{
-    margin:2%;
+    margin:0%;
     display:inline-block;
     height:max-content;
     vertical-align: bottom;
