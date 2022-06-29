@@ -6,7 +6,7 @@ import time
 
 SCAN_TIMEOUT = 3.0
 
-class SmartScale:
+class SmartScale2:
     def __init__(self):
         self.__zaikoTbl = []
 

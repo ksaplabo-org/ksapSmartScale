@@ -5,7 +5,7 @@ import time
 sender = aws.AWSSender()
 
 def getZaiko():
-    scales = [{"id":"marble","name":"ビー玉", "addr":"30:c6:f7:22:3b:b2" ,"weight":0 ,"weight_box":57.9,"weight_one":5.4,"zaikosu":0}]
+    scales = [{"id":"marble","name":"ビー玉", "addr":"40:91:51:be:f7:8e" ,"weight":0 ,"weight_box":57.9,"weight_one":5.4,"zaikosu":0}]
     return scales
 
 smartScale = smsc.SmartScale()

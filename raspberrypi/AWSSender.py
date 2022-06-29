@@ -2,6 +2,7 @@ import paho.mqtt.client
 import json
 import ssl
 import time
+import datetime
 
 # Mqtt Define
 AWSIoT_ENDPOINT = "alij9rhkrwgll-ats.iot.ap-northeast-1.amazonaws.com"
@@ -48,9 +49,11 @@ class AWSSender:
         for harai in haraiList:
             data = json.dumps({"datetime":harai['datetime'],
                                 "id":harai['zaiko']['id'],
+                                "name":harai['zaiko']['name'],
                                 "haraisu":harai['haraisu'],
                                 "zaikosu":harai['zaikosu'],
-                                "scaleWeight":harai['scaleWeight'] 
+                                "scaleWeight":harai['scaleWeight'] ,
+                                "update_dt":datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ') 
                                 })
             self.__client.publish(MQTT_TOPIC_PUB ,data)
 
