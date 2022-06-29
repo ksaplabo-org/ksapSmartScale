@@ -11,7 +11,7 @@
 
 const int DT_PIN = 27;
 const int SCK_PIN = 33;
-const int QUEUE_LEN = 5;
+const int QUEUE_LEN = 3;
 const float THRESHOLD = 0.2;
 
 float queue[QUEUE_LEN];
@@ -136,10 +136,10 @@ void loop() {
     flgM = !flgM;
   }
   display.display();
-
+  
   // Beaconからアドバタイズパケット送信
   pAdvertising->start();
   Serial.printf("Advertizing started (weight:%7.1f g)...\n",weight);
-  delay(50);
+  delay(250);
 
 }

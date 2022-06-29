@@ -113,6 +113,15 @@ body {
     display:inline;
 }
 
+.zaiko-su-blink{
+    animation: blinkAnime 1s infinite alternate;
+}
+
+@keyframes blinkAnime{
+    0% { color: black }
+    100% { color:red }
+}
+
 .zaiko-weight-area{
     display:block;
     font-size:small;
@@ -129,16 +138,16 @@ body {
     text-align: center;
 }
 
-#history-skelton{
+#harai-skelton{
     display: none;
 }
 
-.history-area{
+.harai-area{
     padding:10px;
     background-color: black;
 }
 
-.history-row {
+.harai-row {
     margin: 10px;
     padding: 5px;
     color: white;
